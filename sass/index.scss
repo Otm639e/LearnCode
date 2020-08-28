@@ -1,0 +1,417 @@
+
+
+
+$mainColor: #FFFFFF;
+$yellow: #F7CE74;
+$pink: #EE6CB7;
+$blue: #82D2EE;
+$darkBlue: #283054;
+$gray: #F0F2F8;
+$newblue: #141C39;
+
+
+*{
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+::selection {
+    color: none;
+    background: none;
+}
+/* For Mozilla Firefox */
+::-moz-selection {
+    color: none;
+    background: none;
+}
+html{
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+/* For websites */
+#ad{
+    width: 100%;
+    height: 80px;
+    background-color: $yellow;
+}
+#header{
+    display: flex;
+    width: 100%;
+    height: 68px;
+    background-color: $mainColor;
+    box-shadow: 0px 2px 3.5px #e6e6e6;
+    z-index: 200;
+    #logo{
+        display: block;
+        background-image: url('../images/logo1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 40px;
+        top: 5px;
+        left: 6vw;
+    }
+    .link{
+        text-decoration: none;
+        color: $darkBlue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        top: 25px;
+        left: 8vw;
+        margin: 0 1.5vw;
+        font-size: 18px;
+        font-weight: 400;
+        height: 18px;
+        padding: 1px 5px 5px 5px;
+    }
+    .link:hover{
+        border-bottom: solid $newblue 3px;
+    }
+    #drop-down-menu{
+        display: none;
+    }
+
+    /* For smaller screens (smart devices)        ########################### Begining*/
+    @media only screen and (max-width: 900px) {
+        .link{
+            display: none;
+        }
+        #drop-down-menu{
+            display: block;
+            width: 35px;
+            height: 30px;
+            background-color:$mainColor;
+            margin: 20px auto;
+            margin-right: 6vw;
+            .bar{
+                border-bottom: solid $newblue 4px;
+                border-radius: 10px;
+                width: 100%;
+                margin-bottom: 6px;
+            }
+        }
+        #drop-down-menu:hover {
+            .bar{
+                box-shadow: 2px 2px 4px $darkBlue;
+            }
+        }
+        .center-links{
+            position: absolute;
+            text-decoration: none;
+            color: $newblue;
+            font-size: 15px;
+            left: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+        }
+        .center-links:hover{
+            border: solid $newblue 3px;
+        }
+    }
+    /* For smaller screens (smart devices)      ########################### End*/
+
+}
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .body {
+    padding-top: 68px;
+}
+
+#white-body{
+    width: 100%;
+    height: 600px;
+    background-color: $mainColor;
+    display: flex;
+    .decoration{
+        color: aliceblue;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20vw;
+        left: 35vw;
+        top: -2vw;
+        opacity: 0.9;
+    }
+    .decoration2{
+        color: aliceblue;
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20vw;
+        left: 20vw;
+        top: 244px;
+        opacity: 0.9;
+    }
+    /* For smaller screens (smart devices)        ########################### Begining*/
+    @media only screen and (max-width: 900px) {
+        .decoration{
+            display: none;
+        }
+        .decoration2{
+            display: none;
+        }
+    }
+    /* For smaller screens (smart devices)      ########################### End*/
+    #textEditorImage{
+        display: block;
+        background-image: url('../images/pic.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 33vw;
+        width: 33vw;
+        top: 4vw;
+        left: 6vw;
+    }
+
+    /* For smaller screens (smart devices)        ########################### Begining*/
+    @media only screen and (max-width: 900px) {
+        #textEditorImage {
+            display: none;
+            background-image: none;
+        }
+    
+    }
+    /* For smaller screens (smart devices)       ########################### End*/
+
+    #text-wrapper{
+        top: 4vw;
+        width: 40%;
+        margin-left: 20vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 1.5vw;
+        text-align: left;
+        color: $newblue;
+        h1{
+            text-shadow: 0.3vw 0.3vw 0.3vw rgba($color: #000000, $alpha: 0.16);
+        }
+    }
+
+    /* For smaller screens (smart devices)      ########################### Beggining*/
+    @media only screen and (max-width: 900px) {
+        #text-wrapper{
+            height: 340px;
+            background-color: $newblue;
+            color: $gray;
+            margin: 0 auto;
+            font-size: 22px;
+            text-align: center;
+            width: 80%;
+            padding: 35px 5vw;
+            top: 40px;
+            .small-text{
+                font-size: 22px;
+            }
+
+        }
+    }
+    /* For smaller screens (smart devices)       ########################### End*/
+
+}
+#body-w-info{
+    width: 100%;
+    height: 550px;
+    background-color: $gray;
+    #shadow-box{
+        width: 80%;
+        height: 220px;
+        background-color: $blue;
+        top: -30px;
+        left: 13%;
+        opacity: 36%;
+    }
+    #blue-box{
+        width: 80%;
+        height: 220px;
+        background-color: $blue;
+        top: -280px;
+        left: 10%;
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 3vw;
+            color: $newblue;
+            top: 4vw;
+        }
+    }
+
+    /* For smaller screens (smart devices)      ########################### Begining*/
+    @media only screen and (max-width: 900px) {
+        #blue-box{
+            width: 80%;
+            padding: 10px 10%;
+            left: 0;
+            height: 150px;
+            margin-top: 10px;
+            top: -120px;
+            h1{
+                font-size: 30px;
+            }
+        }
+        #shadow-box{
+            display: none;
+        }
+    }
+    /* For smaller screens (smart devices)     ########################### End*/
+
+    #page-buttons{
+        width: 100%;
+        background-color: $gray;
+        top: -15vw;
+        display: flex;
+        align-items: center;
+        margin-bottom: 5vw;
+        .button{
+            background-color: $pink;
+            color: $gray;
+            width: 70px;
+            height: 35px;
+            border-radius: 5px;
+            outline-style: none;
+            border: none;
+            left: 8vw;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .button:hover {
+            box-shadow: 0 1px 3px grey;
+
+        }
+        p{
+            left: 10vw;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            font-weight: 600;
+
+        }
+    }
+
+    /* For smaller screens (smart devices)         ########################### Begining*/
+    @media only screen and (max-width: 900px) {
+        #page-buttons{
+            display: block;
+            top: -20px;
+            p{
+                top: -80px;
+                font-size: 20px;
+                left: 0;
+                text-align: center;
+            }
+            .button{
+                width: 70%;
+                left: 15%;
+            }
+        }
+    }
+    /* For smaller screens (smart devices)       ########################### End*/
+
+}
+#footer{
+    width: 100%;
+    height: 300px;
+    background-color: $yellow;
+    #contact-title{
+        width: 60%;
+        left: 4vw;
+        top: 1vw;
+        height: 7vw;
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+        }
+        .line{
+            border-bottom: solid $newblue 3px;
+            width: 350px;
+        }
+        #insta-logo{
+            position: absolute;
+            display: block;
+            height: 44px;
+            width: 44px;
+            background-image: url(../images/insta-logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 2vw;
+            margin-left: 2vw;
+            
+        }
+        #email{
+            position: absolute;
+            display: block;
+            height: 42px;
+            width: 44px;
+            background-image: url(../images/email.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            margin-top: 2.1vw;
+            margin-left: 8vw;
+        }
+    }
+
+    /* For smaller screens (smart devices)     ########################### Begining*/
+    @media only screen and (max-width: 900px) {
+        #contact-title{
+            left: 0;
+            width: 100%;
+            h1{
+                text-align: center;
+                font-size: 30px;
+            }
+            .line{
+                display: none;
+                
+            }
+            .line2{
+                display: none;
+            }
+            .line3{
+                display: none;
+            }
+            #insta-logo{
+                position: relative;
+                margin: 0 auto;
+                left: 30px;
+                top: 5px;
+            }
+            #email{
+                position: relative;
+                margin: 0 auto;
+                right: 30px;
+                top: -35px;
+            }
+        }
+    }
+    /* For smaller screens (smart devices)    ########################### End*/
+
+    p{
+        position: absolute;
+        font-family: Arial, Helvetica, sans-serif;
+        color: $mainColor;
+        font-size: 1.2vw;
+        top: 275px;
+        height: 1.2vw;
+        left: 70vw;
+    }
+    @media only screen and (max-width: 900px) {
+        p{
+            position: relative;
+            font-size: 10px;
+            left: 0;
+            text-align: center;
+            top: 160px;
+        }
+    }
+    
+    
+}
