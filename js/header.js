@@ -78,13 +78,14 @@ function scrollDown() {
 
 
 //make buttons lead to corresponding pages//
-function goToHtmlPractice() {
-  window.location.href = "../public/htmlPractice.html";
-}      
+function goToCalc() {
+  window.location.href = "../Calculator/index.html";
+}    
 
-function goToCssPractice() {
-  window.location.href = "../public/cssPractice.html";
-}     
+function goToAboutMe() {
+  window.location.href = "../public/about.html";
+}  
+    
 
 
 
