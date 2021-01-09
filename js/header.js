@@ -37,7 +37,7 @@ contactLink.style["margin-left"]='-29px';
 
 const aboutUsLink = document.createElement("a");
 aboutUsLink.href = "about.html";
-aboutUsLink.innerText = "About Us";
+aboutUsLink.innerText = "About Me";
 aboutUsLink.classList.add("center-links");
 aboutUsLink.style["top"]='200px';
 aboutUsLink.style["margin-left"]='-34px';
@@ -74,7 +74,7 @@ function scrollDown() {
   contactLink.href = "#footer";
 }
 
-/////////////////////////////Starting to build html and css practice page////////////////////
+/////////////////////////////Links to the portfolio and resume and all the projects////////////////////
 
 
 //make buttons lead to corresponding pages//
@@ -83,9 +83,16 @@ function goToCalc() {
 }    
 
 function goToAboutMe() {
-  window.location.href = "../public/about.html";
+  window.location.href = "../public/about.html#languages";
 }  
-    
 
+function goToResume() {
+  window.location.href = "#";
+} 
 
+////////////////////////////////scrolling to protfolio///////////////////
+const port = document.getElementById("port");
+if (port) {
+  port.addEventListener("click", goToAboutMe);
+}
 

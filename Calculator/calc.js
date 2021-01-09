@@ -1,4 +1,4 @@
-console.log("hello world");
+
 var monitor=document.getElementsByClassName("typing-screen");
 var script=document.getElementById("script");
 var one=document.getElementById("one");
@@ -18,6 +18,7 @@ var division=document.getElementById("divide");
 var clear=document.getElementById("clear");
 var point=document.getElementById("point");
 var equal=document.getElementById("equal");
+var btn = document.getElementsByClassName("btn");
 var digit = "0";
 var firstNum = "0";
 var secondNum = "0";
@@ -25,217 +26,128 @@ var result = "0";
 var equalPressed = "no";
 var oporatorPressed = "no";
 
-digit=firstNum;
-script.innerHTML=digit;
+script.innerHTML = digit;
+
+function drawnum(num) {
+	if (digit == "0" && num != "." || digit == "null") {
+		digit = num;
+	} else {
+		digit = digit + num;
+	}
+	return digit;
+}
 
 one.onclick=()=>{
-	let extraNum = "1";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("1");
 }
 two.onclick=()=>{
-	let extraNum = "2";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("2");
 }
 three.onclick=()=>{
-	let extraNum = "3";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("3");
 }
 four.onclick=()=>{
-	let extraNum = "4";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("4");
 }
 five.onclick=()=>{
-	let extraNum = "5";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("5");
 }
 six.onclick=()=>{
-	let extraNum = "6";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("6");
 }
 seven.onclick=()=>{
-	let extraNum = "7";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("7");
 }
 eight.onclick=()=>{
-	let extraNum = "8";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("8");
 }
 nine.onclick=()=>{
-	let extraNum = "9";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("9");
 }
 zero.onclick=()=>{
-	let extraNum = "0";
-	if (digit != "0") {
-		digit = digit + extraNum;
-		script.innerHTML=digit;
-	} else {
-		digit = extraNum;
-		script.innerHTML=digit;
-	}
+	script.innerHTML = drawnum("0");
 }
 point.onclick=()=>{
-	let extraNum = ".";
-	digit = digit + extraNum;
-	script.innerHTML=digit;
+	script.innerHTML = drawnum(".");
 }
 clear.onclick=()=>{
 	result="";
 	digit = "0";
-	script.innerHTML=digit;
+	script.innerHTML = digit;
 	equalPressed = "no";
 	oporatorPressed = "no";
 	equal.onclick=()=>{
 		digit="0";
-		script.innerHTML=digit;
+		script.innerHTML = digit;
 	}	
 }
-
 ////////////////////////////////////
 //    The Oporators Section!!     //
 ////////////////////////////////////
-var y = "0";
-var x = "0";
+var y = "null";
+var x = "null";
 
 addition.onclick=()=>{
-	if (oporatorPressed == "yes") {
-		y = digit;
-		result=Number(x)+Number(y);
-		script.innerHTML=result;
-		x = result;
-		digit = x;
-	} else {
+	if (digit != "null") {
 		x = digit;
-		script.innerHTML = x;
-		digit = secondNum;
-		oporatorPressed = "yes";
+		digit = "null";
+		script.innerHTML = "";
+		console.log(digit);
+		console.log(result);
 		equal.onclick=()=>{
-			if (equalPressed == "yes") {
-				result=Number(x)+Number(y);
-				script.innerHTML=result;
-				x = result;
-			} else {
-				y = digit;
-				result=Number(x)+Number(y);
-				script.innerHTML=result;
-				x=result;
-				digit=x;
-				equalPressed = "yes";
-			}
+			y = digit;
+			result = Number(x) + Number(y);
+			digit = result;
+			script.innerHTML = result;
 		}
-	}	
+	}
+	
 }
 
-multiplication.onclick=()=>{
-	x = digit;
-	script.innerHTML = x;
-	digit = secondNum;
-	equal.onclick=()=>{
-		if (equalPressed == "yes") {
-			result=Number(x)*Number(y);
-			script.innerHTML=result;
-			x = result;
-		} else {
+subtraction.onclick=()=> {
+	if (digit != "null") {
+		x = digit;
+		digit = "null";
+		script.innerHTML = "";
+		console.log(digit);
+		console.log(result);
+		equal.onclick=()=>{
 			y = digit;
-			result=Number(x)*Number(y);
-			script.innerHTML=result;
-			x = result;
-			digit = x;
-			equalPressed = "yes";
+			result = Number(x) - Number(y);
+			digit = result;
+			script.innerHTML = result;
 		}
 	}
 }
 
-subtraction.onclick=()=>{
-	x = digit;
-	script.innerHTML = x;
-	digit = secondNum;
-	equal.onclick=()=>{
-		if (equalPressed == "yes") {
-			result=Number(x)-Number(y);
-			script.innerHTML=result;
-			x = result;
-		} else {
+multiplication.onclick=()=> {
+	if (digit != "null") {
+		x = digit;
+		digit = "null";
+		script.innerHTML = "";
+		console.log(digit);
+		console.log(result);
+		equal.onclick=()=>{
 			y = digit;
-			result=Number(x)-Number(y);
-			script.innerHTML=result;
-			x = result;
-			digit = x;
-			equalPressed = "yes";
+			result = Number(x) * Number(y);
+			digit = result;
+			script.innerHTML = result;
 		}
 	}
 }
 
 division.onclick=()=>{
-	x = digit;
-	script.innerHTML = x;
-	digit = secondNum;
-	equal.onclick=()=>{
-		if (equalPressed == "yes") {
-			result=Number(x)/Number(y);
-			script.innerHTML=result;
-			x = result;
-		} else {
+	if (digit != "null") {
+		x = digit;
+		digit = "null";
+		script.innerHTML = "";
+		console.log(digit);
+		console.log(result);
+		equal.onclick=()=>{
 			y = digit;
-			result=Number(x)/Number(y);
-			script.innerHTML=result;
-			x = result;
-			digit = x;
-			equalPressed = "yes";
+			result = Number(x) / Number(y);
+			digit = result;
+			script.innerHTML = result;
 		}
 	}
 }
