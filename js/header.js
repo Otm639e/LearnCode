@@ -96,3 +96,41 @@ if (port) {
   port.addEventListener("click", goToAboutMe);
 }
 
+
+function mobileView(x) {
+  const mobile = isMobile();
+  if (mobile) {
+    mobileViewC();
+    const cover = x.getElementsByClassName("cover");
+    cover[0].style.backgroundColor = "#4D535E";
+    const p = x.getElementsByClassName("description");
+    p[0].style.color = "#FFFFFF";
+    const h2 = x.getElementsByClassName("plink");
+    h2[0].style.color = "#F7CE74";
+  } 
+}
+
+function mobileViewC() {
+  const project = document.getElementsByClassName("project");
+  for (i = 0; i < project.length; i++) {
+    mobileViewCancel(project[i]);
+  }
+}
+
+function mobileViewCancel(x) {
+  const cover = x.getElementsByClassName("cover");
+  cover[0].style.backgroundColor = "transparent";
+  const p = x.getElementsByClassName("description");
+  p[0].style.color = "transparent";
+  const h2 = x.getElementsByClassName("plink");
+  h2[0].style.color = "transparent";
+  console.log("clicked");
+}
+
+function isMobile() {
+  try{ document.createEvent("TouchEvent"); return true; }
+  catch(e){ return false; }
+}
+
+
+
