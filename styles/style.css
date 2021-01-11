@@ -636,6 +636,9 @@ body {
   #portfolio .project {
     width: 90%;
   }
+  #portfolio .project .picture {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
