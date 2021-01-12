@@ -5,7 +5,7 @@ let image_on_page = document.createElement("img"); //creating an element "img"
 image_on_page.classList.add('size');               //putting a class on that img
 //image_on_page.src = 'images/brawstars.jpeg';       //giving that "img an src or url"
 
-let listOfImages = ['images/LA.JPG', 'images/AngelesNationalP.JPG', 'images/Barca.JPG', 'images/LosAngeles.JPG', 'images/Palmdale.JPG', 'images/Pearblossom.jpg', 'images/SanFran.JPG', 'images/SantaMonica.JPG', 'images/SnowMan.JPG', 'images/UCB.JPG']
+let listOfImages = ['images/LA.JPG', 'images/AngelesNationalP.JPG', 'images/Barca.JPG', 'images/LosAngeles.JPG', 'images/Palmdale.JPG', 'images/Pearblossom.jpg', 'images/SanFran.JPG', 'images/SantaMonica.JPG', 'images/snowMan.JPG', 'images/UCB.JPG']
 //list of images 
 
 main.appendChild(image_on_page);          //inputting this new creared element(img) into the main div
@@ -122,12 +122,12 @@ leftBox.onclick = ()=>{
 //The words that come unique to every character//
 /////////////////////////////////////////////////
 
-characterSuper = ["Los Angelesm, USA", "Angeles National Park, USA", "Barcelona, Spain", "Los Angelesm, USA", "Palmdale, USA", "Pearblossom, USA", "San Fransisco, USA", "Santa Monica, USA", "Random Snowman", "UC Berkeley, USA"];
+characterSuper = ["Los Angelesm, USA", "Angeles National Park, USA", "Barcelona, Spain", "Los Angeles, USA", "Palmdale, USA", "Pearblossom, USA", "San Fransisco, USA", "Santa Monica, USA", "Random Snowman", "UC Berkeley, USA"];
 
 let middleWords = document.createElement('p');
 main.appendChild(middleWords);
 middleWords.classList.add("supers");
-middleWords.innerText = characterSuper[listOfImages.indexOf(random)]
+middleWords.innerText = characterSuper[listOfImages.indexOf(random)];
 
 
 
