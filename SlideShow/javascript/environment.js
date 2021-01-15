@@ -122,7 +122,7 @@ leftBox.onclick = ()=>{
 //The words that come unique to every character//
 /////////////////////////////////////////////////
 
-characterSuper = ["Los Angelesm, USA", "Angeles National Park, USA", "Barcelona, Spain", "Los Angeles, USA", "Palmdale, USA", "Pearblossom, USA", "San Fransisco, USA", "Santa Monica, USA", "Random Snowman", "UC Berkeley, USA"];
+characterSuper = ["Los Angeles, USA", "Angeles National Park, USA", "Barcelona, Spain", "Los Angeles, USA", "Palmdale, USA", "Pearblossom, USA", "San Fransisco, USA", "Santa Monica, USA", "Random Snowman", "UC Berkeley, USA"];
 
 let middleWords = document.createElement('p');
 main.appendChild(middleWords);

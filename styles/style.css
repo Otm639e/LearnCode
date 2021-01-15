@@ -542,7 +542,7 @@ body {
   height: 70px;
   width: 70px;
   align-self: center;
-  margin: 10px 10px;
+  margin: 10px 20px;
 }
 #languages h1 {
   position: absolute;
@@ -552,6 +552,11 @@ body {
   margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 290px) {
+  #languages {
+    height: 500px;
+  }
+}
 #portfolio {
   background-color: #FFFFFF;
   width: 100%;
