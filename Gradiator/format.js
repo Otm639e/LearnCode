@@ -25,14 +25,16 @@ let transimg = new Image();
 transimg.src = '../Gradiator/transElips.png';
 
 //Elements Created
+let mainbod = document.getElementsByClassName('body')[0];
+
 let header2 = document.createElement('div');
-document.body.appendChild(header2);
+mainbod.appendChild(header2);
 
 let title = document.createElement('h1');
 header2.appendChild(title);
 
 let image = document.createElement('div');
-document.body.appendChild(image);
+mainbod.appendChild(image);
 
 let scroll1 = document.createElement('div');
 scroll1.classList.add('scrollable');
@@ -46,7 +48,7 @@ image.appendChild(scroll2);
 
 //These are the first row of inputs elements
 let choosingColor1 = document.createElement('div');
-document.body.appendChild(choosingColor1);
+mainbod.appendChild(choosingColor1);
 
 let percentage = document.createElement('div');
 choosingColor1.appendChild(percentage);
@@ -60,7 +62,7 @@ choosingColor1.appendChild(hexcode);
 
 //These are the second row of inputs elements
 let choosingColor2 = document.createElement('div');
-document.body.appendChild(choosingColor2);
+mainbod.appendChild(choosingColor2);
 
 let percentage2 = document.createElement('div');
 choosingColor2.appendChild(percentage2);
@@ -74,7 +76,7 @@ choosingColor2.appendChild(hexcode2);
 
 //These are the third row of inputs elements
 let choosingColor3 = document.createElement('div');
-document.body.appendChild(choosingColor3);
+mainbod.appendChild(choosingColor3);
 
 let percentage3 = document.createElement('div');
 choosingColor3.appendChild(percentage3);
@@ -88,19 +90,19 @@ choosingColor3.appendChild(hexcode3);
 
 //These are the forth row of inputs elements
 let choosingColor4 = document.createElement('div');
-document.body.appendChild(choosingColor4);
+mainbod.appendChild(choosingColor4);
 
 let go = document.createElement('button');
 choosingColor4.appendChild(go);
 ///////////////////////////////////////////////
 
 let blackBoard = document.createElement('div');
-document.body.appendChild(blackBoard);
+mainbod.appendChild(blackBoard);
 
 //Time for some styling (decoration)
 document.body.style.backgroundColor = mainColor;
+mainbod.style.backgroundColor = mainColor;
 
-header2.style.marginTop = '68px';
 header2.style.visibility = 'visible';
 header2.style.position = 'relative';
 header2.style.display = 'flex';
