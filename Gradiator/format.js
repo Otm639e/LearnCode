@@ -121,6 +121,7 @@ title.style.color = superDarkGray;
 title.innerHTML = 'GRADIATOR';
 title.style.fontFamily = 'Comic Sans MS, Comic Sans, cursive';
 title.style.fontSize = '33px';
+title.style.fontWeight = "900";
 title.style.borderBottom = `solid 2px ${superDarkGray}`;
 image.style.visibility = 'visible';
 image.style.width = '100%';
