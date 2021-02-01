@@ -6,7 +6,7 @@
 
 ::selection {
   color: none;
-  background: none;
+  background: #F7CE74;
 }
 
 /* For Mozilla Firefox */
@@ -375,7 +375,7 @@ body {
 
 ::selection {
   color: none;
-  background: none;
+  background: #F7CE74;
 }
 
 /* For Mozilla Firefox */

@@ -16,7 +16,7 @@ $superDarkGray: #0B1419;
 }
 ::selection {
     color: none;
-    background: none;
+    background: $yellow;
 }
 /* For Mozilla Firefox */
 ::-moz-selection {

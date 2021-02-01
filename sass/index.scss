@@ -17,7 +17,7 @@ $newblue: #141C39;
 }
 ::selection {
     color: none;
-    background: none;
+    background: $yellow;
 }
 /* For Mozilla Firefox */
 ::-moz-selection {

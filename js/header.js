@@ -42,6 +42,13 @@ aboutUsLink.classList.add("center-links");
 aboutUsLink.style["top"]='200px';
 aboutUsLink.style["margin-left"]='-34px';
 
+const gradiator = document.createElement("a");
+gradiator.href = "gradiator.html";
+gradiator.innerText = "Gradiator";
+gradiator.classList.add("center-links");
+gradiator.style["top"]='250px';
+gradiator.style["margin-left"]='-33px';
+
 dropDownMenu.addEventListener("click", headerDrop);
 
 function headerDrop() {
@@ -51,12 +58,14 @@ function headerDrop() {
     header.appendChild(homeLink);
     header.appendChild(contactLink);
     header.appendChild(aboutUsLink);
+    header.appendChild(gradiator);
   } else{
     header.style['height']='68px';
     pressed = 0;
     homeLink.remove();
     contactLink.remove();
     aboutUsLink.remove();
+    gradiator.remove();
   }
 }
 
@@ -71,6 +80,7 @@ function scrollDown() {
   homeLink.remove();
   contactLink.remove();
   aboutUsLink.remove();
+  gradiator.remove();
   contactLink.href = "#footer";
 }
 
