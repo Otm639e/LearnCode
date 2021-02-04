@@ -92,12 +92,28 @@ choosingColor3.appendChild(hexcode3);
 let choosingColor4 = document.createElement('div');
 mainbod.appendChild(choosingColor4);
 
+let colorPicker = document.createElement('div');
+choosingColor4.appendChild(colorPicker);
+colorPicker.id = 'picker';
+colorPicker = new iro.ColorPicker('#picker', {
+    width: 150,
+    color: mainColor
+});
+
+let display4 = document.createElement('button');
+choosingColor4.appendChild(display4);
+
+let hexcode4 = document.createElement('div');
+choosingColor4.appendChild(hexcode4);
+
 let go = document.createElement('button');
 choosingColor4.appendChild(go);
 ///////////////////////////////////////////////
 
 let blackBoard = document.createElement('div');
 mainbod.appendChild(blackBoard);
+
+let hex = colorPicker.color.hexString;
 
 //Time for some styling (decoration)
 document.body.style.backgroundColor = mainColor;
@@ -296,9 +312,37 @@ choosingColor4.style.flexFlow = 'wrap';
 choosingColor4.style.justifyContent = "space-evenly";
 choosingColor4.style.alignContent = 'center';
 choosingColor4.style.textAlign = 'center';
-choosingColor4.style.height = rowHeight;
-choosingColor4.style.marginTop = '20px';
+choosingColor4.style.marginTop = '60px';
 choosingColor4.style.backgroundColor = mainColor;
+choosingColor4.style.width = '95%';
+choosingColor4.style.padding = '0 2.5%';
+
+display4.style.width = '60px';
+display4.style.height = '45px';
+display4.style.backgroundColor = hex;
+display4.style.border = `solid 4px ${gray}`;
+display4.style.borderRadius = '15px';
+display4.style.fontSize = '20px';
+display4.style.color = darkGray;
+display4.style.padding = '5px';
+display4.style.outline = 'none';
+display4.style.margin = '75px 30px';
+display4.style.marginBottom = '0px';
+
+hexcode4.innerHTML = hex.toUpperCase();
+hexcode4.style.backgroundColor = mainColor;
+hexcode4.style.height = '25px';
+hexcode4.style.width = '100px';
+hexcode4.style.border = `solid 4px ${gray}`;
+hexcode4.contentEditable = 'true';
+hexcode4.style.borderRadius = '15px';
+hexcode4.style.fontFamily = 'Arial, Helvetica, sans-serif';
+hexcode4.style.fontSize = '20px';
+hexcode4.style.color = darkGray;
+hexcode4.style.padding = '5px';
+hexcode4.style.outline = 'none';
+hexcode4.style.margin = '75px 30px';
+hexcode4.style.marginBottom = '0px';
 
 go.innerHTML = 'Go';
 go.style.width = '200px';
@@ -311,6 +355,9 @@ go.style.fontSize = '20px';
 go.style.color = superDarkGray;
 go.style.padding = '5px';
 go.style.outline = 'none';
+go.style.margin = '75px 30px';
+go.style.marginBottom = '0px';
+
 
 blackBoard.style.width = '60%';
 blackBoard.style.textAlign = 'left';
@@ -401,6 +448,14 @@ function push() {
 function release() {
     this.style.borderColor = gray;
 }
+
+// listen to a color picker's color:change event
+// color:change callbacks receive the current color
+colorPicker.on('color:change', function(color) {
+    // log the current color as a HEX string
+    display4.style.backgroundColor = color.hexString;
+    hexcode4.innerHTML = color.hexString.toUpperCase();
+  });
 
 //functions for touch (phones)
 function touchstarting(event) {
