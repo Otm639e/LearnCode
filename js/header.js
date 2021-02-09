@@ -97,7 +97,7 @@ function goToAboutMe() {
 }  
 
 function goToResume() {
-  window.location.href = "https://drive.google.com/file/d/1g-x-_2ddC25gxKuh1no25VJ6CT3HyDh5/view?usp=sharing";
+  window.location.href = "https://drive.google.com/file/d/1AcNR_L2HBkikHk2YhGxv6jwn8Hve7Ce7/view?usp=sharing";
 } 
 
 ////////////////////////////////scrolling to protfolio///////////////////
