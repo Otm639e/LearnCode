@@ -370,7 +370,7 @@ blackBoard.style.backgroundImage = `linear-gradient(to right, #000000 0%, #11111
 blackBoard.style.color = mainColor;
 blackBoard.style.fontSize = '20px';
 blackBoard.style.fontFamily = 'Arial, Helvetica, sans-serif';
-blackBoard.innerHTML = `background:<br>linear-gradient(<br>to right,<br>${color1} ${deg1},<br>${color2} ${deg2},<br>${color3} ${deg3},<br>);`;
+blackBoard.innerHTML = `background:<br>linear-gradient(<br>to right,<br>${color1} ${deg1},<br>${color2} ${deg2},<br>${color3} ${deg3}<br>);`;
 blackBoard.style.lineHeight = '40px';
 
 //Functions
