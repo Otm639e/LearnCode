@@ -1,5 +1,6 @@
 let main = document.createElement("div");
 document.body.appendChild(main);
+main.id = "main";
 
 let image_on_page = document.createElement("img"); //creating an element "img" 
 image_on_page.classList.add('size');               //putting a class on that img
@@ -43,14 +44,14 @@ rightArrow.classList.add('rightArrow');        //adding a class to the H1 or 'ri
 ///////////////////////////////////////////////////////////////////
 
 leftBox.onmouseover = ()=>{
-	leftArrow.style["color"]='purple'
+	leftArrow.style["color"]='#885266'
 }
 leftBox.onmouseout = ()=>{
 	leftArrow.style["color"]='grey'
 }
 
 rightBox.onmouseover = ()=>{
-	rightArrow.style["color"]='purple'
+	rightArrow.style["color"]='#885266'
 }
 rightBox.onmouseout = ()=>{
 	rightArrow.style["color"]='grey'
@@ -66,9 +67,8 @@ leftBox.addEventListener("click", myLeftFunction);
 function myRightFunction() {
 	if(random == 'images/UCB.JPG'){
 		random = 'images/LA.JPG'
-		image_on_page.src = random
-		middleWords.innerText = characterSuper[listOfImages.indexOf(random)]
-		middleWords.style.animation = comingDown
+		image_on_page.src = random;
+		middleWords.innerText = characterSuper[listOfImages.indexOf(random)];
 	}	else{
 		random = listOfImages[listOfImages.indexOf(random)+1]
 		image_on_page.src = random
@@ -81,6 +81,7 @@ function myLeftFunction() {
 	if(random == 'images/LA.JPG'){
 		random = 'images/UCB.JPG'
 		image_on_page.src = random
+		middleWords.innerText = characterSuper[listOfImages.indexOf(random)];
 	}	else{
 		random = listOfImages[listOfImages.indexOf(random)-1]
 		image_on_page.src = random
@@ -126,8 +127,9 @@ characterSuper = ["Los Angeles, USA", "Angeles National Park, USA", "Barcelona, 
 
 let middleWords = document.createElement('p');
 main.appendChild(middleWords);
-middleWords.classList.add("supers");
+middleWords.id = ("supers");
 middleWords.innerText = characterSuper[listOfImages.indexOf(random)];
+let words = document.getElementsByClassName("supers");
 
 
 
