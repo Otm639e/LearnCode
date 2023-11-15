@@ -6,7 +6,7 @@
 
 ::selection {
   color: none;
-  background: none;
+  background: #F7CE74;
 }
 
 /* For Mozilla Firefox */
@@ -35,12 +35,27 @@ body {
   background-repeat: no-repeat;
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
+  /* For smaller screens (smart devices)        ########################### Begining*/
+  /* For smaller screens (smart devices)        ########################### Ending*/
 }
 #main-pic h1 {
   font-size: 5vw;
   left: 12vw;
   top: 2vw;
   margin-right: 2vw;
+}
+@media only screen and (max-width: 900px) {
+  #main-pic h1 {
+    font-size: 40px;
+  }
+}
+
+.about-wrapper {
+  display: flex;
+}
+
+.left-side {
+  width: 50%;
 }
 
 #elipse {
@@ -54,18 +69,20 @@ body {
   height: 160px;
   width: 160px;
   border-radius: 100px;
-  background-image: url(../images/omar.JPG);
-  background-size: 170px;
+  background-image: url(../images/omar.jpg);
+  background-size: 400px;
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: 60%;
   left: 30px;
   top: 25px;
 }
 
 #our-info {
+  top: 10px;
   left: 20vw;
   display: block;
-  width: 50%;
+  width: fit-content;
 }
 #our-info h1 {
   font-size: 25px;
@@ -79,17 +96,186 @@ body {
   margin-top: 10px;
 }
 #our-info p {
-  font-size: 25px;
+  font-size: 18px;
   color: #95979B;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
   margin-top: 10px;
 }
 
+.right-side {
+  display: block;
+  width: 40%;
+  padding: 0 10%;
+  text-align: left;
+}
+.right-side h1 {
+  margin: 0 auto;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  color: #EE6CB7;
+}
+.right-side p {
+  margin: 0 auto;
+  width: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #8d9096;
+  font-size: 20px;
+  font-weight: lighter;
+  line-height: 40px;
+}
+
+/* For smaller screens (smart devices)        ########################### Begining*/
+@media only screen and (max-width: 900px) {
+  .about-wrapper {
+    display: block;
+  }
+
+  .right-side {
+    width: 80%;
+    padding: 0 10%;
+    margin-top: 100px;
+  }
+
+  .left-side {
+    width: 100%;
+  }
+
+  #elipse {
+    left: 0;
+    margin: 0 auto;
+  }
+
+  #our-info {
+    left: 0;
+    margin: 0 auto;
+  }
+}
+/* For smaller screens (smart devices)        ########################### Ending*/
 #white-space {
   width: 100%;
   height: 100px;
   background-color: #FFFFFF;
+}
+
+#languages {
+  width: 100%;
+  height: 300px;
+  background-color: #F0F2F8;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+}
+#languages img {
+  top: 20px;
+  height: 70px;
+  width: 70px;
+  align-self: center;
+  margin: 10px 20px;
+}
+#languages h1 {
+  position: absolute;
+  color: #EE6CB7;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 290px) {
+  #languages {
+    height: 500px;
+  }
+}
+#portfolio {
+  background-color: #FFFFFF;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+  text-align: center;
+}
+#portfolio h1 {
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 20px;
+  color: #EE6CB7;
+}
+#portfolio .project {
+  position: relative;
+  height: 400px;
+  width: 300px;
+  margin: 10px 10px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  text-align: center;
+}
+#portfolio .project h2 {
+  top: 10px;
+  color: #EE6CB7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#portfolio .project p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4D535E;
+  margin-top: 25px;
+}
+#portfolio .project .picture {
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #FFFFFF;
+  background-size: contain;
+  border-radius: 20px;
+}
+#portfolio .project .cover {
+  position: absolute;
+  top: 0px;
+  z-index: 200;
+  height: 80%;
+  width: 80%;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 10% 10%;
+}
+#portfolio .project .cover p {
+  color: transparent;
+  text-align: left;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#portfolio .project .cover a {
+  position: relative;
+  color: transparent;
+  text-align: left;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#portfolio .project .cover:hover {
+  background-color: #4D535E;
+}
+#portfolio .project .cover:hover p {
+  color: #FFFFFF;
+}
+#portfolio .project .cover:hover a {
+  color: #F7CE74;
+}
+@media only screen and (max-width: 380px) {
+  #portfolio .project {
+    width: 90%;
+  }
+  #portfolio .project .picture {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=about.css.map */
